@@ -1,0 +1,172 @@
+.navbarItems{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    width: 95%;
+    height: 80px;
+    border-radius: 13px;
+    position: fixed;
+    top: 20px;
+    left:50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    z-index: 1;
+    
+}
+.navbar-logo{
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display:grid;
+    grid-template-columns: repeat(6,auto);
+    grid-gap: 10px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links{
+
+
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+
+
+}
+
+.nav-links i{
+
+    padding-right: 10px;
+}
+
+.nav-links:hover{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 217, 152);
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+
+
+
+}
+
+.nav-links-signup{
+    display: none;
+}
+
+
+button{
+
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-color: rgb(189, 189, 189);
+}
+
+button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.menu-icon{
+    display: none;
+}
+
+
+@media screen and (max-width:850px){
+
+
+
+    .navbarItems{
+        z-index: 1;
+    }
+
+    .nav-menu{
+        display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      align-items: stretch;
+      border-radius: 13px;
+      padding: 80px 0 30px 0;
+      margin: 0;
+      z-index: -1;
+      transition: all .3s ease-out;
+      display: none;
+    }
+
+   
+
+    .nav-menu.active{
+        left:0;
+        opacity: 1;
+        z-index: -1;
+        display: block;
+        transition: all .3s ease;
+    }
+
+    .nav-links{
+
+
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding:  2rem;
+    
+    
+    }
+
+    .nav-links:hover{
+        background-color: rgb(58, 228, 171);     
+           transition: none;
+    }
+
+    button{
+        display: none;
+    }
+
+    .nav-links-signup{
+        display: block;
+
+        text-align: center;
+        padding: 1.5rem;
+        margin: auto;
+        border-radius: 4px;
+        width: 80%;
+        text-decoration: none;
+        background-color: rgb(58, 228, 171);
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: brown;
+        
+
+    }
+    .menu-icon{
+        display: block;
+    }
+
+    .menu-icon i{
+        font-size: 1.2rem;
+        color: black;
+    }
+}
